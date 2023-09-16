@@ -20,10 +20,12 @@ app.use(express.json())
 app.use(cors())
 
 //routes
-app.get('/',(req,res)=>{
-    res.send("<h1>hello from server</h1>")
-})
+//user
+app.use('/api/v1/users',require('./routes/userRoute'));
+//transection
+app.use('/api/v1/transections',require('./routes/transectionRoute'));
 
+//port
 const PORT = 8080 || process.env.PORT
 
 //listen server
