@@ -1,17 +1,25 @@
-const express = require('express');
-const { addTransection, getAllTransection } = require('../controllers/transectionCtrl');
+const express = require("express");
+const {
+  addTransection,
+  getAllTransection,
+  editTransection,
+  deleteTransection,
+} = require("../controllers/transectionCtrl");
+const { route } = require("./userRoute");
 
-
-
-//router obj
-
-const router = express.Router()
+//router object
+const router = express.Router();
 
 //routes
-//add transection POST method
-router.post('/add-transection',addTransection);
+//add transection POST MEthod
+router.post("/add-transection", addTransection);
 
-//get transection 
-router.post('/get-transection', getAllTransection);
+//get transections
+router.post("/get-transection", getAllTransection);
 
-module.exports = router
+//edit transections 
+router.post("/edit-transection",editTransection);
+
+//delete transections
+router.post("/delete-transection",deleteTransection)
+module.exports = router;
