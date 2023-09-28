@@ -21,5 +21,6 @@ router.post("/get-transection", getAllTransection);
 router.post("/edit-transection",editTransection);
 
 //delete transections
-router.post("/delete-transection",deleteTransection)
+router.post("/delete-transection",deleteTransection);
+
 module.exports = router;
